@@ -1,24 +1,7 @@
-#Sophia Padilla #Sap8ht
+
 
 #Overview: we will make an underwater/ocean themed game where the user plays a fish/turtle/mermaid and has to
 #collect shells, and avoid being eaten by sharks
-
-#Required Features:
-# User Input: user will move around using up,down keys
-# Graphics: We will put an ocean-like background image, we will also use images for the players(fish) and shells and rocks,etc.
-# Start screen: we will make a start screen with instructions
-
-#Optional Features: (choose 4)
-#collectables: the user will collect shells which will increase the score
-#enemies: every once in a while a shark will appear and try to eat the user
-#health bar: if the shark or rocks touches the user, the health bar will go down, game ends when health is at zero
-#scrolling level: the screen will scroll from right to left making it appear as if the user is swimming
-#sounds: there will be sounds for when the user collects coins, and bad sound when it touches something/loses health
-
-#timeline
-#checkpoint 1 get a rough outline
-#checkpoint 2 get it all working
-#final make it pretty
 
 
 
@@ -40,15 +23,7 @@ scoreboard=gamebox.from_text(750,10,"SCORE:  "+str(score) ,"Arial", 20,"white")
 fish = gamebox.from_image(350, 300, 'f3.png')
 fish.scale_by(0.1)
 underline = gamebox.from_color(350,350,"black",100,20)
-evan = gamebox.from_image(500,300,'Esub (2).png')
-evan.scale_by(0.3)
-lineE = gamebox.from_color(500,400,"black", 100, 20)
-zayn = gamebox.from_image(650,300,'Zzsub.png')
-zayn.scale_by(0.3)
-lineZ = gamebox.from_color(650,400,"black", 100, 20)
-dimitri = gamebox.from_image(800,300,'ddsub.png')
-dimitri.scale_by(0.4)
-lineD = gamebox.from_color(800,400,"black", 100,20)
+
 
 
 r1= gamebox.from_image(100, 600, 'r1.png')
@@ -136,29 +111,13 @@ def splash(keys):
     camera.draw(directions)
     camera.draw(fish)
     camera.draw(underline)
-    camera.draw(evan)
-    camera.draw(dimitri)
-    camera.draw(zayn)
-    camera.draw(names)
+    
     camera.draw(GAMENAME)
     camera.draw(healthbar)
 
-    if pygame.K_f in keys:
-        underline.x = 350
-        underline.y = 350
-        box = fish
-    if pygame.K_e in keys:
-        underline.x  = 500
-        underline.y = 375
-        box = evan
-    if pygame.K_z in keys:
-        underline.x  = 650
-        underline.y = 375
-        box = zayn
-    if pygame.K_d in keys:
-        underline.x  = 800
-        underline.y = 375
-        box = dimitri
+    
+    box = fish
+    
 
     camera.draw(underline)
     if pygame.K_SPACE in keys:
