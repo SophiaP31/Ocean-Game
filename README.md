@@ -1,11 +1,9 @@
 # Ocean Game
 ## Dependencies:
-* Python 3
-To install: https://www.python.org/downloads/
-* Pygame
-To install, run `pip install pygame`
-## To Run:
-`python game.py`
+* Python 3 (Install here: https://www.python.org/downloads/)
+* Pygame (To install, run `pip install pygame`)
+## To Play:
+run `python game.py`
 ## Instructions:
 * Collect as many shells as possible without getting hit by the shark. 
 * Each shell equals one point.
